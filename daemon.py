@@ -3,10 +3,11 @@
 import re
 import time
 import traceback
+import sys
 
 import graphitesend
 
-graphitesend.init(graphite_server="192.168.1.3", prefix="hawotemp", system_name="")
+graphitesend.init(graphite_server=sys.argv[1], prefix="hawotemp", system_name="")
 
 
 def telnet_get(host: str, port: int) -> str:
